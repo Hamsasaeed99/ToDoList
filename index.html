@@ -25,16 +25,22 @@
         <i class="fas fa-lightbulb sticker"></i>
         <i class="fas fa-calculator sticker"></i>
     </div>
+    <div class="theme-toggle">
+        <button class="theme-btn" id="themeBtn">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <div class="user-session">
+        <span id="userEmail"></span>
+        <button onclick="logout()" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+    </div>
 
     <div class="main-wrapper">
 
         <div class="todo-container">
-            <div class="user-session">
-                <span id="userEmail"></span>
-                <button onclick="logout()" class="logout-btn">
-                    <i class="fas fa-sign-out-alt"></i> Logout
-                </button>
-            </div>
             <header>
                 <div class="header-text">
                     <h1>My Tasks</h1>
@@ -65,10 +71,8 @@
         </div>
     </div>
 
+    <script src="theme.js"></script>
     <script src="script.js"></script>
-
 </body>
-
-</html>
 
 </html>
