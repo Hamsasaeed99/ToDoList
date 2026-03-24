@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - To-Do List</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+
+<div class="background-elements">
+    <i class="fas fa-lock sticker"></i>
+    <i class="fas fa-user-plus sticker"></i>
+    <i class="fas fa-shield-alt sticker"></i>
+    <i class="fas fa-key sticker"></i>
+</div>
+
+<div class="main-wrapper">
+    <div class="todo-container auth-container">
+        <header>
+            <div class="header-text">
+                <h1 id="authTitle">Welcome Back</h1>
+                <p id="authSubtitle">Please login to manage your tasks</p>
+            </div>
+            <img src="check-list.png" alt="Checklist Icon" class="title-icon">
+        </header>
+
+        <form id="authForm">
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" placeholder="Password" required>
+                <i class="fas fa-eye toggle-password" id="togglePassword"></i>
+            </div>
+            
+            <button type="submit" id="authBtn" class="primary-btn">Login</button>
+        </form>
+
+        <div class="auth-footer">
+            <p id="toggleText">Don't have an account? <a href="#" id="toggleAuth">Sign Up</a></p>
+        </div>
+    </div>
+</div>
+
+<script src="auth.js"></script>
+
+</body>
+</html>

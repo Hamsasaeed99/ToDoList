@@ -1,3 +1,11 @@
+// Authentication Check
+(function checkAuth() {
+    const session = JSON.parse(localStorage.getItem('todo_session'));
+    if (!session || !session.isLoggedIn) {
+        window.location.href = 'auth.html';
+    }
+})();
+
 // State Management
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 let currentFilter = 'all';
@@ -11,6 +19,13 @@ const filterBtns = document.querySelectorAll('.filter-btn');
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
+    // Session Display (Email)
+    const session = JSON.parse(localStorage.getItem('todo_session'));
+    if (session && session.email) {
+        const userEmailSpan = document.getElementById('userEmail');
+        if (userEmailSpan) userEmailSpan.textContent = session.email;
+    }
+
     renderTasks();
     updateDate();
     
@@ -33,6 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
 function updateDate() {
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     dateDisplay.textContent = new Date().toLocaleDateString(undefined, options);
+}
+
+function logout() {
+    localStorage.removeItem('todo_session');
+    window.location.href = 'auth.html';
 }
 
 function addTask() {
