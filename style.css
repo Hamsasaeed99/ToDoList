@@ -49,9 +49,19 @@
     background: rgba(255, 255, 255, 0.06);
 }
 
+.dark-mode .task-item.completed {
+    opacity: 0.8;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .task-item.completed span {
+    color: var(--text-muted);
+}
+
 .dark-mode .input-group input {
     background: rgba(15, 23, 42, 0.6);
     border-color: rgba(255, 255, 255, 0.1);
+    color: white;
 }
 
 
@@ -371,12 +381,12 @@ header p {
 .task-item.completed {
     background: #f8fafc;
     border-color: transparent;
-    opacity: 0.7;
+    opacity: 0.85;
 }
 
 .task-item.completed span {
     text-decoration: line-through;
-    color: var(--text-muted);
+    color: #475569;
 }
 
 .task-checkbox {
@@ -518,7 +528,7 @@ header {
 
 #userEmail {
     font-size: 0.9rem;
-    color: var(--text-main);
+    color: #0c4a6e;
     font-weight: 600;
 }
 
